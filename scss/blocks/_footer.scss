@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'metropolis';
+    src: url(/fonts/Metropolis-Medium.otf) format('opentype'); /* Укажите путь к файлу шрифта и его формат */
+    font-weight: 500, 700; /* Укажите желаемый вес шрифта */
+}
+
+
+footer {
+    background-color: #2C234D;
+
+    a {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            background-color: white;
+            border-radius: 20px;
+            width: 120px;
+            color: black;
+            padding: 20px;
+            font-weight: 700;
+            position: relative;
+            z-index: 5;
+            font-size: 17px;
+
+            @media (max-width: 845px) {
+                
+            }
+
+            span {
+                color: #5838FC;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 70px auto 70px auto;
+    gap: 140px;
+}
+
+
+.footer__apps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+    .google-play,
+    .app-store {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        border-radius: 15px;
+        gap: 10px;
+        width: 150px;
+        padding: 15px;
+        color: white;
+
+        @media (max-width: 530px) {
+            width: 134px;
+            height: 50px;
+        }
+
+        p {
+            font-size: 10px;
+            font-family: 'Metropolis', sans-serif; /* Используйте название вашего шрифта */
+            font-weight: 500;
+
+            @media (max-width: 530px) {
+                font-size: 8px;
+            }
+        }
+
+        h4 {
+            font-size: 14px;
+            font-family: 'Metropolis', sans-serif; /* Используйте название вашего шрифта */
+            font-weight: 700;
+
+            @media (max-width: 530px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .app-text {
+        display: inline-block;
+    }
+}
+
+
+
+@media (max-width: 1300px) {
+    .footer__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 180px);
+        margin: 70px auto 70px auto;
+        gap: 140px;
+        place-content: center;
+    }
+
+    .footer__apps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 845px) {
+    .footer__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        margin: 70px auto 70px auto;
+        gap: 140px;
+    }
+
+
+    .footer__apps {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column: 1/2;
+    }
+
+    .footer__list-wrapper2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        @media (max-width: 530px) {
+            width: 200px;
+        }
+
+        @media (max-width: 413px) {
+            width: 135px;
+        }
+    }
+
+
+    .footer__list-wrapper-1 li,
+    .footer__list-wrapper2 li {
+
+        @media (max-width: 530px) {
+            width: 175px;
+        }
+
+        @media (max-width: 459px) {
+            width: 115px;
+        }
+    }
+
+    .footer__list-wrapper a {
+        margin-top: 15px;
+    }
+
+    .footer__list-wrapper-1 li,
+    .footer__list-wrapper2 li {
+        @media (max-width:459px) {
+            margin-right: 50px;
+        }
+    }
+
+    .logo {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
+
+@media (max-width: 530px) {
+    .footer__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .logo a {
+        display: none;
+    }
+
+    .footer__list-wrapper2 {
+        order: -1;
+    }
+}

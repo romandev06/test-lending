@@ -1,0 +1,134 @@
+@mixin size($w, $h, $fz, $fw, $m, $p) {
+    width: $fw;
+    height: $h;
+    font-size: $fz;
+    font-weight: $fw;
+    margin: $m;
+    padding: $p;
+}
+
+@mixin travel($position, $right, $left, $top, $bottom) {
+    position: $position;
+    right: $right;
+    left: $left;
+    top: $top;
+    bottom: $bottom;
+}
+
+@mixin appearance($bgcol, $color, $bord, $bordrad) {
+    background-color: $bgcol;
+    color: $color;
+    border: $bord;
+    border-radius: $bordrad;
+}
+
+
+
+
+header {
+    background-image: linear-gradient(90deg, #6b39a8 50%, #4280cc 100%);
+}
+
+.header__first-part {
+    display: flex;
+
+    a{
+        background-color: white;
+        border-radius: 20px;
+        width: 120px;
+        color: black;
+        padding: 20px;
+        font-weight: 700;
+        position: relative;
+        z-index: 5;
+
+        @media (max-width: 900px) {
+            border-radius: 15px;
+        }
+
+        @media (max-width: 385px) {
+            width: 106px;
+            height: 45px;
+        }
+
+            p {
+                @media (max-width: 375px) {
+                    position: relative;
+                    bottom: 9px;
+                }
+            }
+
+        span {
+            color: #5838FC;
+            text-transform: uppercase;
+        }
+    }
+
+    form {
+        background-color: #F7F6FA;
+        width: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        border-radius: 20px;
+        position: relative;
+        right: 30px;
+
+        @media (max-width: 900px) {
+            border-radius: 15px;
+        }
+
+        @media (max-width: 650px) {
+            display: none;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        input {
+            border: none;
+            border-radius: 15px;
+        }
+    }
+}
+
+.log-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 136px;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 13px;
+
+    @media (max-width: 385px) {
+        width: 125px;
+        height: 45px;
+    }
+
+    p {
+        font-weight: 700;
+        color: white;
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+
+/* media */
+
+@media screen and (max-width: 1300px) {
+    .header__inner {
+        display: flex;
+        justify-content: space-around;
+    }
+}
